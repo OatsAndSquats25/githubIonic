@@ -10,11 +10,12 @@ export class GithubUsers {
     githubApiUrl = 'https://api.github.com';
 
     constructor(public http: Http) {
-        // Load all github users
-        load(): Observable <User[]> {
-            return this.http.get(`${this.githubApiUrl}/users`)
-                .map(res => <User[]>res.json());
-        }
+    }
+
+    // Load all github users
+    load(): Observable<User[]> {
+        return this.http.get(`${this.githubApiUrl}/users`)
+            .map(res => <User[]>res.json());
     }
 
 }
